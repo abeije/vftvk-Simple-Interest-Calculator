@@ -1,4 +1,23 @@
-body {background-color:tan;}
-h1{color:green;}
+body {background-color:black;font-family:arial;color:white}
+h1{color: grey;font-family:verdana;text-align:center}
+.maindiv{
+    background-color:white;color:black;width:600px;padding:20px;border-radius:25px;margin-left:auto;margin-right:auto;
+}
+
+mark {
+    background-color:#FFFF00; 
+}
+
+.visible {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    margin-left: auto;
+    margin-right: auto;
+    visibility: hidden;
+}
+
 
 

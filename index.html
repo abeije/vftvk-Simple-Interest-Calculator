@@ -1,16 +1,72 @@
-<html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
-    </body>
-</html>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Simple Interest Calculator</title>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+            <div class="maindiv">
+            <h1>Simple Interest Calculator</h1>
+                <table class="visible">
+                    <tr>
+                        <td align="left">Amount</td>
+                        <td align="left"><input type="number"  id="principal"></td>
+                    </tr>
+                    <br/>
+                    <tr>
+                        <td align="left">Rate</td>
+                        <td align="right"><input type="range" onchange="updateRate()" id="rate" min=1 max=20 step=0.25><span id="rate_val">10.50%</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left">No. of Years</td>
+                        <td align="left"><select id="years">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <input type="button" onclick="compute()" value="Compute Interest"></td>
+                    </tr>
+                </table>
+                <br/>
+                <table class="hidden" id="hidden_table">
+                    <tr>
+                        <td align="left"><span>If you deposit </span><mark><span id="principal_var"></span></mark><span>,</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><span>at an interest rate of </span><mark><span id="rate_var"></span></mark><span>.</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><span>You will receive an amount of </span><mark><span id="interest_var"></span></mark><span>,</span></td>
+                    </tr>
+                    <tr>
+                        <td align="left"><span>in the year </span><mark><span id="year_var"></span></mark><span>.</span></td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <footer>
+                    &#169; This Calculator belongs to Aljosja Beije
+                </footer>
+            </div> 
+        </body>
+    </html>
